@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodDay</title>
+  <link href="stylesheet" rel="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #07544f;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    .logo1 {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      height: 90px;
+      width: auto;
+      z-index: 4;
+    }
+
+    .navbar ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #07544f;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: white;
+      background-color: #07544f;
+      border-radius: 25px;
+    }
+
+    /* Video */
+    .banner video {
+      position: absolute;
+      top: 140px; /* di bawah logo */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55%; /* agak kecil */
+      height: auto;
+      border-radius: 15px;
+      z-index: 1;
+    }
+
+    /* Teks h1 di pojok kiri bawah */
+    .content h1 {
+      position: absolute;
+      bottom: 100px; /* di atas tombol */
+      left: 40px;
+      font-size: 40px;
+      color: #07544f;
+      text-align: left;
+      z-index: 3;
+    }
+
+    /* Tombol eksplor */
+    button {
+      position: absolute;
+      bottom: 10px; /* diturunkan dari 30px ke 10px */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #07544f;
+      color: white;
+      border: none;
+      padding: 12px 40px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 4;
+    }
+
+    button:hover {
+      background-color: #0a6a63;
+    }
+
+    @media (max-width: 768px) {
+      .banner video {
+        width: 80%;
+        top: 180px;
+      }
+
+      .content h1 {
+        font-size: 28px;
+        bottom: 80px;
+      }
+
+      button {
+        bottom: 5px;
+        padding: 10px 30px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <video autoplay loop muted plays-inline>
+      <source src="GoodDay video ads (1).mp4" type="video/mp4">
+    </video>
+
+    <div class="navbar">
+      <img class="logo1" src="GoodDay2-removebg-preview.png" height="100" width="100">
+      <ul>
+        <li><a href="index.html"><u>home</u></a></li> 
+        <li><a href="profil.html"><u>profil</u></a></li>
+        <li><a href="galery.html"><u>galery</u></a></li>
+        <li><a href="kontak.html"><u>kontak</u></a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>GoodDay</h1>
+    </div>
+
+    <button type="button">eksplor</button>
+  </div>
+</body>
+</html>
